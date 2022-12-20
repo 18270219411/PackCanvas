@@ -1,0 +1,37 @@
+{
+  "extends": "tslint-config-alloy",
+  "importsNotUsedAsValues": "preserve",
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "target": "ES5",
+    "module": "CommonJS",
+    "lib": ["ES2015", "ES2017", "DOM"],
+    "strict": true,
+    "baseUrl": ".",
+    "outDir": "./dist/",
+    "resolveJsonModule": true,
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "noImplicitAny": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "typeRoots": ["./node_modules/@types", "./node_modules/@figma"],
+    "paths": {
+      "@i18n": ["./src/i18n"],
+      "@models": ["./src/models"],
+      "@helper": ["./src/helper"],
+      "@helper/*": ["./src/helper/*"],
+      "@constants": ["./src/constants"],
+      "@actions": ["./src/actions"],
+      "@figma": ["./src/figma"],
+      "@figma/*": ["./src/figma/*"],
+      "@plugin": ["./src/plugin"],
+      "@plugin/*": ["./src/plugin/*"],
+      "@components": ["./src/components"],
+      "@components/*": ["./src/components/*"]
+    }
+  },
+  "files": ["./types/global.d.ts", "./types/custom.d.ts", "./types/action-type.d.ts"],
+  "include": ["./src/**/*"]
+}

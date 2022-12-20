@@ -1,0 +1,36 @@
+.s-init {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(77, 77, 77, 0.1);
+
+  .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 24px 20px 0;
+    height: 48px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    border-width: 1px;
+    border-style: solid;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &.cn {
+      border-color: rgb(254, 64, 102, .8);
+    }
+
+    &.en {
+      border-color: rgb(113, 41, 183, .8);
+    }
+
+    &.exit {
+      border-color: rgb(180, 88, 0, 0.8);
+    }
+  }
+}

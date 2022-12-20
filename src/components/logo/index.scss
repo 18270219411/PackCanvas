@@ -1,0 +1,26 @@
+.s-logo {
+  margin-bottom: 36px;
+  background: #bfdbdb;
+  border-bottom: 1px dashed rgba(0, 0, 0, .5);
+
+  .logo-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 130px;
+    text-shadow: 0 1px 0 hsl(174deg 5% 80%), 0 2px 0 hsl(174deg 5% 75%), 0 3px 0 hsl(174deg 5% 70%),
+      0 4px 0 hsl(174deg 5% 66%), 0 5px 0 hsl(174deg 5% 64%), 0 6px 0 hsl(174deg 5% 62%), 0 7px 0 hsl(174deg 5% 61%),
+      0 8px 0 hsl(174deg 5% 60%), 0 0 5px rgb(0 0 0 / 5%), 0 1px 3px rgb(0 0 0 / 20%), 0 3px 5px rgb(0 0 0 / 20%),
+      0 5px 10px rgb(0 0 0 / 20%), 0 10px 10px rgb(0 0 0 / 20%), 0 20px 20px rgb(0 0 0 / 30%);
+    background: url(https://18270219411.github.io/assets/auto-compress-export/logo_bg.gif);
+  }
+
+  .logo-text {
+    margin: 0 8px;
+    color: #fff;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: bold;
+  }
+}
