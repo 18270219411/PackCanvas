@@ -70,7 +70,7 @@ export function downloadCompressImageZip(data: IExportLayerData[]) {
 
   if (data.length === 1) {
     const { name, format, buffer } = data[0];
-    const blob = new Blob([buffer], { type: `image/${format}` });
+    const blob = new Blob([Buffer.from(buffer)], { type: `image/${format}` });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;

@@ -8,7 +8,7 @@
     "prefigma-dev": "rm -rf dist",
     "figma-dev": "webpack --config ./config/webpack.figma.dev.js --watch",
     "prefigma-build": "rm -rf dist",
-    "figma-build": "webpack --config ./config/webpack.figma.dev.js",
+    "figma-build": "webpack --config ./config/webpack.figma.prod.js",
     "prebuild": "rm -rf dist",
     "build": "tsc -p tsconfig.json"
   },
