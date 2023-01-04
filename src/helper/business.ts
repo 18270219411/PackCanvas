@@ -76,7 +76,6 @@ export function downloadCompressImageZip(data: IExportLayerData[]) {
     a.href = url;
     a.download = `${name}.${format}`;
     a.click();
-    document.removeChild(a);
     return;
   }
 

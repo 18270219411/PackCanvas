@@ -44,7 +44,11 @@ const Home: FC = () => {
       <div className='s-button b3' onClick={throttle(getAllPageSlice, 100)}>
         {i18n('home.getAllPageSlice')}
       </div>
-      <div className='copyright'>Copyright © 2021-2022 wobuzy</div>
+      {/* <div className='copyright'>
+        <a href='https://beian.miit.gov.cn/' target='_blank'>
+          蜀ICP备2022030822号-1
+        </a>
+      </div> */}
     </div>
   );
 };

@@ -8,7 +8,7 @@ export function uploadImage(
   projectName: string,
   total: number,
 ): Promise<IExportLayerData> {
-  return post('http://127.0.0.1:20002/compress', {
+  return post('https://wobuzyy.cn/compress', {
     name: name.replace(/\//g, '_'),
     file: Buffer.from(data),
     format: format.toLocaleLowerCase(),
