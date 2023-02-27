@@ -4,6 +4,8 @@ export {
   getAllPagesFrames,
   getSelectedPageFrame,
   getSelectedFrames,
+  getSelectedNode,
   multiplyExportImage,
+  getUserInfo,
 } from './plugin';
 export { multiplyUploadImage, downloadCompressImageZip } from './business';

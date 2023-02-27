@@ -3,8 +3,7 @@
   "id": "1189449915016538108",
   "api": "1.0.0",
   "main": "dist/main.js",
-  "editorType": [
-    "figma"
-  ],
-  "ui": "dist/ui.html"
+  "editorType": ["figma"],
+  "ui": "dist/ui.html",
+  "permissions": ["currentuser", "activeusers", "fileusers"]
 }

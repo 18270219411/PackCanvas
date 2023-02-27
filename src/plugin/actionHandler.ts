@@ -2,9 +2,11 @@ import {
   onCancelTask,
   getAllPagesFrames,
   getExportLayers,
+  getSelectedNode,
   getSelectedFrames,
   getSelectedPageFrame,
   multiplyExportImage,
+  getUserInfo,
 } from '@helper';
 import { sendToWeb } from './rpc';
 import { EUploadType, IRPCParams } from '@models';
@@ -22,8 +24,17 @@ export default function ({ type, payload }: IRPCParams) {
         onCancelTask();
         layers = [];
         break;
+      case ActionTypes.rpc.getUserInfo.request:
+        sendToWeb({
+          type: ActionTypes.rpc.getUserInfo.done,
+          payload: getUserInfo(),
+        });
+        break;
       case ActionTypes.rpc.check.request:
         switch (payload) {
+          case EUploadType.SelectedNode:
+            layers = getExportLayers(getSelectedNode());
+            break;
           case EUploadType.SelectedFrame:
             layers = getExportLayers(getSelectedFrames());
             break;
@@ -42,7 +53,6 @@ export default function ({ type, payload }: IRPCParams) {
           payload: layers.length,
         });
         break;
-
       case ActionTypes.rpc.getExportLayers.request:
         multiplyExportImage(layers);
         break;

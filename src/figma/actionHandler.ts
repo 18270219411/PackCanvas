@@ -4,6 +4,7 @@ import { ERouterPath, IRPCParams } from '@models';
 import { multiplyUploadImage } from '@helper';
 import i18n from '@i18n';
 import { sendToFigma } from './rpc';
+import { recordUserInfo } from '../api';
 
 export default function (params: IRPCParams, dispatch: Function) {
   const { type, payload } = params;
@@ -15,6 +16,9 @@ export default function (params: IRPCParams, dispatch: Function) {
         break;
       case ActionTypes.common.route:
         dispatch(Actions.changeRouter(payload));
+        break;
+      case ActionTypes.rpc.getUserInfo.done:
+        recordUserInfo(payload);
         break;
       case ActionTypes.rpc.changeProgress:
         dispatch(Actions.changeExportProgress(payload));

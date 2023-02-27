@@ -7,6 +7,7 @@ import { sendToFigma } from '@figma/rpc';
 export interface IDispatcher {
   changeRouter(router: ERouterPath): void;
   onExport(uploadType: EUploadType): void;
+  getUserInfo(): void;
 }
 
 export const getDispatcher = (dispatch: Dispatch): IDispatcher => ({
@@ -20,6 +21,11 @@ export const getDispatcher = (dispatch: Dispatch): IDispatcher => ({
     sendToFigma({
       type: ActionTypes.rpc.check.request,
       payload: uploadType,
+    });
+  },
+  getUserInfo: () => {
+    sendToFigma({
+      type: ActionTypes.rpc.getUserInfo.request,
     });
   },
 });

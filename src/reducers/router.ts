@@ -1,4 +1,4 @@
-import ActionTypes from "@constants";
+import ActionTypes from '@constants';
 import { IRouteState, ERouterPath } from '@models';
 
 const initState: IRouteState = {
@@ -16,4 +16,4 @@ export default (state = initState, action: any) => {
     default:
       return state;
   }
-}
+};

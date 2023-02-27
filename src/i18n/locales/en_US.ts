@@ -10,6 +10,7 @@ export default {
   },
   home: {
     setting: 'Settings',
+    getSelectedNodeSlice: 'Export the selected layers',
     getSelectedFrameSlice: 'Export the selected artboard(s)',
     getSelectedPageSlice: 'Export the selected pages',
     getAllPageSlice: 'Export all pages',
@@ -20,6 +21,6 @@ export default {
     complete: 'Success',
     download: 'Download',
     exportInfo: 'success: {0}, fail: {1}',
-    success: 'Exit'
+    success: 'Exit',
   },
 };

@@ -7,7 +7,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 24px 20px 0;
+    margin: 0 20px 24px;
     height: 48px;
     text-align: center;
     font-size: 16px;
@@ -22,11 +22,11 @@
     }
 
     &.cn {
-      border-color: rgb(254, 64, 102, .8);
+      border-color: rgb(254, 64, 102, 0.8);
     }
 
     &.en {
-      border-color: rgb(113, 41, 183, .8);
+      border-color: rgb(113, 41, 183, 0.8);
     }
 
     &.exit {

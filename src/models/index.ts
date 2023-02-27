@@ -21,6 +21,7 @@ export enum ERouterPath {
 
 export enum EUploadType {
   AllPages = 'allPages',
+  SelectedNode = 'selectedNode',
   SelectedPage = 'selectedPage',
   SelectedFrame = 'selectedFrame',
 }
@@ -51,6 +52,11 @@ export type RootState = {
 // ? --------------- common ---------------
 
 // ? --------------- api ---------------
+export interface IBasePayload<T> {
+  code: number;
+  message: string;
+  data?: T;
+}
 
 export class CustomError extends Error {
   public code: number;

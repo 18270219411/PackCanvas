@@ -32,6 +32,14 @@ export const getSelectedPageFrame = (): FrameNode[] => {
   return getPageFrames(figma.currentPage);
 };
 
+export const getSelectedNode = (): SceneNode[] => {
+  const result: SceneNode[] = [];
+
+  figma.currentPage.selection.forEach((node) => result.push(node));
+
+  return result;
+};
+
 const getPageFrames = (page: PageNode) => {
   const result: FrameNode[] = [];
   if (page) {
@@ -198,3 +206,16 @@ async function getLayerExportImage(layer: any): Promise<IExportLayerData> {
     }
   });
 }
+
+export const getUserInfo = () => {
+  const user = figma.currentUser;
+  if (user) {
+    return {
+      id: user.id,
+      name: user.name,
+      avatar: user.photoUrl,
+      color: user.color,
+      sessionId: user.sessionId,
+    };
+  }
+};

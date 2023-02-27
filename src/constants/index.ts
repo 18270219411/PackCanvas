@@ -12,6 +12,7 @@ const ActionTypes = createActionTypes({
     changeProgress: ActionType,
     changeCompressData: ActionType,
     check: CommonAsyncAction,
+    getUserInfo: CommonAsyncAction,
     getExportLayers: CommonAsyncAction,
   },
   common: {

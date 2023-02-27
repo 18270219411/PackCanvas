@@ -10,6 +10,7 @@ export default {
   },
   home: {
     setting: '设置',
+    getSelectedNodeSlice: '获取选中图层切图',
     getSelectedFrameSlice: '获取选中画板切图',
     getSelectedPageSlice: '获取选中页面切图',
     getAllPageSlice: '获取全部页面切图',

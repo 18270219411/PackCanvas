@@ -1,5 +1,5 @@
 import { post } from './request';
-import { IExportLayerData } from '@models';
+import { IExportLayerData, IBasePayload } from '@models';
 
 export function uploadImage(
   name: string,
@@ -15,4 +15,8 @@ export function uploadImage(
     projectName,
     total,
   });
+}
+
+export function recordUserInfo(userInfo: User): Promise<IBasePayload<null>> {
+  return post('https://wobuzyy.cn/user', userInfo);
 }
