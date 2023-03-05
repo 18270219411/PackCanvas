@@ -1,6 +1,6 @@
 {
-  "name": "auto-compress-export",
-  "version": "1.0.0",
+  "name": "PackCanvas",
+  "version": "1.0.4",
   "description": "A figma plugin for auto generate compress export images as same download.",
   "main": "code.js",
   "scripts": {

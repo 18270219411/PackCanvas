@@ -118,21 +118,6 @@ export function multiplyExportImage(layers: SceneNode[]) {
   console.log('start export slice...');
   console.log(`export total layer num: ${totalToExport}`);
 
-  // TODO: 免费版 tinypng 单 ip 最大限制 500 张
-  // if (totalToExport > 500) {
-  //   sendToWeb({
-  //     type: ActionTypes.common.route,
-  //     payload: ERouterPath.Home,
-  //   });
-
-  //   sendToWeb({
-  //     type: ActionTypes.common.message,
-  //     payload: '抱歉，一次只支持导出 500 张切图',
-  //   });
-
-  //   return;
-  // }
-
   handleCallbackFunctions(
     {
       tasks: layers.map((layer) => (cb: Function) => {
@@ -210,12 +195,6 @@ async function getLayerExportImage(layer: any): Promise<IExportLayerData> {
 export const getUserInfo = () => {
   const user = figma.currentUser;
   if (user) {
-    return {
-      id: user.id,
-      name: user.name,
-      avatar: user.photoUrl,
-      color: user.color,
-      sessionId: user.sessionId,
-    };
+    return { ...user };
   }
 };
